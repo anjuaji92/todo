@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="style.css"> 
   
 </head>
-<body background="lave.jpg">
+<body background="black.jpg" >
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="javascript:void(0)">TODO</a>
@@ -24,7 +24,7 @@
                 <a class="nav-link" href="javascript:void(0)">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link" href="javascript:void(0)">Login</a>
               </li>
             
             </ul>
@@ -35,7 +35,31 @@
           </div>
         </div>
       </nav>
-      <h1>What about Exploring some Todos today!!</h1>
-      <h2>Let's get Started......</h2>
+     <div>
+        <h2>Login Form</h2>
+
+        <form action="/action_page.php" method="post">
+          
+        
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+                
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+        
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+        
+     </div>
 </body>
 </html>
