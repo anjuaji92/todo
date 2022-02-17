@@ -10,7 +10,7 @@ function ajax()
             var output="";
             for(var i=0;i<response.length;i++)
             {
-                output +="<li>"+response[i].title +"</li>";
+                output +='<input type="checkbox" name="tname" value="'+response[i].completed;+'">'+response[i].title +'<br></input>';
             }
             document.getElementById("demo").innerHTML=output;
         }
