@@ -38,7 +38,7 @@
      </div>
      <script>
        function ajax()
-{
+       {
     var xhttp=new XMLHttpRequest();
     xhttp.onreadystatechange=function()
     {
@@ -49,12 +49,27 @@
             var output="";
             for(var i=0;i<response.length;i++)
             {
-                output +='<input type="checkbox" name="title" value="'+response[i].id;+'">'+response[i].title +'<br></input>';
-                
-               // output +="<li>"+response[i].title +"</li>";
+              // output+='<input type="checkbox" checked='+response[i].completed+' value="<li>"'+response[i].title +'"</li>'+response[i].title +'<br></input>';
+              //console.log(response[i].completed);
+              output+='<input type="checkbox" checked="" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
+              function check()
+              {
+                if(response[i].completed==false)
+                {
+                  return false;
+                }
+                else{
+                  return true;
+                }
+              }
+               
             }
-            document.getElementById("demo").innerHTML=output;
+            var dwrap=document.getElementById("demo");
+            dwrap.innerHTML=output;
+        
         }
+        
+       
     }
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
     xhttp.send();
