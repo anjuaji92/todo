@@ -51,19 +51,18 @@
             {
               // output+='<input type="checkbox" checked='+response[i].completed+' value="<li>"'+response[i].title +'"</li>'+response[i].title +'<br></input>';
               //console.log(response[i].completed);
-              output+='<input type="checkbox" checked="" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
-              function check()
-              {
-                if(response[i].completed==false)
+             // output+='<input type="checkbox" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
+        if(response[i].completed==true)
                 {
-                  return false;
+                  output+='<input type="checkbox" checked diabled="disable" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
+                  console.log(output);
                 }
                 else{
-                  return true;
-                }
-              }
+                  output+='<input type="checkbox" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
+                   }
+         }
                
-            }
+            
             var dwrap=document.getElementById("demo");
             dwrap.innerHTML=output;
         
