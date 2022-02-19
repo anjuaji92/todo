@@ -36,6 +36,7 @@
        <h1>todo lists</h1>
        <button onclick="ajax();">click me</button>
      </div>
+     <div><label id="lead"></label></div>
      <script>
        function ajax()
        {
@@ -72,17 +73,36 @@
     }
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
     xhttp.send();
-    var max_limit = 2; // Max Limit
-$(document).ready(function (){
-    $(".game:input:checkbox").each(function (index){
-        this.checked = (".game:input:checkbox" < max_limit);
-    }).change(function (){
-        if ($(".game:input:checkbox:checked").length > max_limit){
-            this.checked = false;
+    
+       }
+
+
+       var promise=new Promise(function(resolve,reject){
+        var a=0;
+        var b=0;
+        var i=0;
+        for(i=0;response[i].length<200;i++){
+            if(response[i].checked){
+                a++;
+            
+            }
+            else{
+                b++;
+               
+            }
         }
+        if(b-a==10){
+            resolve();
+        }
+        else{
+            reject(b-a);
+        }
+    })
+    promise.then(function(){
+        document.getElementById("lead").innerHTML=" Congrats!! 5 Tasks have been Successfully Completed " ;
+        alert("Congrats!! 5 Tasks have been Successfully Completed ");
+
     });
-});
-}
 
      </script>
 </body>
