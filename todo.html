@@ -54,11 +54,11 @@
              // output+='<input type="checkbox" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
         if(response[i].completed==true)
                 {
-                  output+='<input type="checkbox" checked diabled="disable" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
+                  output+='<input class="game" type="checkbox" checked diabled="disable" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
                   console.log(output);
                 }
                 else{
-                  output+='<input type="checkbox" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
+                  output+='<input class="game" type="checkbox" value="<li>"'+response[i].title+'"</li>'+response[i].title+'<br></input>';
                    }
          }
                
@@ -72,7 +72,18 @@
     }
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
     xhttp.send();
+    var max_limit = 2; // Max Limit
+$(document).ready(function (){
+    $(".game:input:checkbox").each(function (index){
+        this.checked = (".game:input:checkbox" < max_limit);
+    }).change(function (){
+        if ($(".game:input:checkbox:checked").length > max_limit){
+            this.checked = false;
+        }
+    });
+});
 }
+
      </script>
 </body>
 </html>
