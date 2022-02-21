@@ -6,7 +6,7 @@ body{
 
 }
 h1{
-    margin-top: 250px;
+    margin-top: 50px;
     margin-left: 350px;
 }
 h2{
@@ -71,4 +71,31 @@ span.psw {
   }
   
   
+}
+
+
+
+
+.disabledList{
+    
+  pointer-events:none; 
+  opacity:0.6;        
+
+}
+
+#todoList{
+  /* border: 10px solid rgb(84, 57, 206); */
+  border-radius: 1rem;
+}
+
+#mainnavbar{
+  background: #1005ac;
+}
+body{
+  background-color:#104391;
+
+}
+#welcomeText{
+  margin-top:60px;
+  text-align: center;
 }
