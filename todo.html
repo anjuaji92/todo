@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="style.css"> 
   
 </head>
-<body background="black.jpg" onload="ajax();">
+<body background="black.jpg" onload="loadDoc();">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="javascript:void(0)">TODO</a>
@@ -21,10 +21,10 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href=""></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Login</a>
+                <a class="nav-link" href="index.html">Logout</a>
               </li>
             
             </ul>
@@ -32,26 +32,33 @@
           </div>
         </div>
       </nav>
-      <div class=" container">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-            <h1 class="display-4">ToDo List</h1>
-            <p>Complete any 5 tasks </p>
-            <p id="lead"></p>
+      <div class="container marginTop marginBottomReduce minHeight mb-5 " >
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-10 mt-3" style="z-index: 100;">
+                
+                <h3 id="welcomeText" class="text-white text-capitalize"></h3>
+            </div>
+
+        </div>
+        <h1>My Todolist</h1>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8 col-10 " style="z-index: 100;">
+                <ul class="list-group text-white" id="todoList">
+                    
+                </ul>
             </div>
         </div>
-    
-        <div class="container" id="demo" oninput="check()"></div> 
     </div>
-</div>
+    
 
 
 
-    <!--<div id="demo">
-       <h1>todo lists</h1>
-     </div>
-     <div><p id="lead"></label></div>
-     <script src="scrap.js"> </script>--> 
-     <script src="api.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="todo.js"></script>
+    
 </body>
 </html>

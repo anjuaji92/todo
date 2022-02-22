@@ -18,7 +18,7 @@ function validate2()
         return true;
     }
     else{
-        alert("Either usr or pwd is invalid");
+        alert("Either username or password is invalid");
         return false;
     }
 }

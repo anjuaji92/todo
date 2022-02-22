@@ -2,24 +2,24 @@
 function check()
 {
     var mypromise=new Promise(function(resolve,reject){
-        var a=0;
-        var b=0;
+        var c=0;
+        var t=0;
         var i=0;
         for(i=0;i<200;i++){
             if(todo[i].checked){
-                a++;
+                c++;
             
             }
             else{
-                b++;
+                t++;
                
             }
         }
-        if(b-a==10){
+        if(t-c==10){
             resolve();
         }
         else{
-            reject(b-a);
+            reject(t-c);
         }
     })
     mypromise.then(function(){
